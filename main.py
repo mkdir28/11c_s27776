@@ -1,7 +1,7 @@
 import math
 # Import square_generator.py module
 from square_generator import SquareGenerator, checker
-from abc import ABC
+from abc import ABC, abstractmethod
 #Task1 List Comprehensions
 squares = [x**2 for x in range(1, 11)]
 print(squares)
@@ -46,12 +46,7 @@ print(checker)
 print(SquareGenerator.e_squares(1, 10))
 
 #Task8 Inheritance
-class CubicGenerator(SquareGenerator):
-    def e_cubes(start, end):
-        squares = [x ** 3 for x in range(start, end + 1)]
-        return squares
 
-    print(e_cubes(1, 10))
 
 #Task9 Function Overriding
 class CubicGenerator(SquareGenerator):
@@ -65,3 +60,17 @@ class CubicGenerator(SquareGenerator):
     print(e_squares(7, 2))
 
 #Task10 Abstract Elements
+class SquareGenerator(ABC):
+    def e_squares(start, end):
+        squares = [x ** 2 for x in range(start, end + 1)]
+        return squares
+
+    print(e_squares(1, 10))
+
+class CubicGenerator(SquareGenerator):
+    @abstractmethod
+    def e_cubes(start, end):
+        squares = [x ** 3 for x in range(start, end + 1)]
+        return squares
+
+    print(e_cubes(1, 10))
