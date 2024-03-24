@@ -1,3 +1,4 @@
+import math
 #Task1 List Comprehensions
 squares = [x**2 for x in range(1, 11)]
 print(squares)
@@ -15,3 +16,5 @@ class SquareGenerator:
         return squares
 
     print(e_squares(1, 10))
+
+#Task4 Libraries
