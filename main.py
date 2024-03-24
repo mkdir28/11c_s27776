@@ -24,3 +24,16 @@ class SquareGenerator:
         return squares
 
     print(e_squares(1, 10))
+
+#Task5 Exceptions
+class SquareGenerator:
+    def e_squares(start, end):
+        try:
+            if end > start:
+                squares = [x ** 2 for x in range(start, end + 1)]
+                return squares
+            else:
+                raise ValueError("Error - there couldn't be  the end of the range is less than the start.")
+        except ValueError as ve:
+            print(ve)
+    print(e_squares(6, 1))
