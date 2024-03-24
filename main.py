@@ -51,3 +51,16 @@ class CubicGenerator(SquareGenerator):
         return squares
 
     print(e_cubes(1, 10))
+
+#Task9 Function Overriding
+class CubicGenerator(SquareGenerator):
+    def e_squares(start, end):
+        try:
+            if end < start:
+                raise ValueError("Error - there couldn't be  the end of the range is less than the start.")
+        except ValueError as ve:
+            print(ve)
+
+    print(e_squares(7, 2))
+
+#Task10 Abstract Elements
