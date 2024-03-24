@@ -43,3 +43,5 @@ class SquareGenerator:
 #Task6 Modules
 print(checker)
 print(SquareGenerator.e_squares(1, 10))
+
+#Task7 Packages
