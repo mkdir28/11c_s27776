@@ -44,4 +44,10 @@ class SquareGenerator:
 print(checker)
 print(SquareGenerator.e_squares(1, 10))
 
-#Task7 Packages
+#Task8 Inheritance
+class CubicGenerator(SquareGenerator):
+    def e_cubes(start, end):
+        squares = [x ** 3 for x in range(start, end + 1)]
+        return squares
+
+    print(e_cubes(1, 10))
