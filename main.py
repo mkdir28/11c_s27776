@@ -1,6 +1,7 @@
 import math
 # Import square_generator.py module
 from square_generator import SquareGenerator, checker
+from abc import ABC
 #Task1 List Comprehensions
 squares = [x**2 for x in range(1, 11)]
 print(squares)
