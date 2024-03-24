@@ -54,6 +54,8 @@ class CubicGenerator(SquareGenerator):
         try:
             if end < start:
                 raise ValueError("Error - there couldn't be  the end of the range is less than the start.")
+            else:
+                return super().e_squares(start, end)
         except ValueError as ve:
             print(ve)
 
