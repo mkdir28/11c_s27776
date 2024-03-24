@@ -18,3 +18,9 @@ class SquareGenerator:
     print(e_squares(1, 10))
 
 #Task4 Libraries
+class SquareGenerator:
+    def e_squares(start, end):
+        squares = [math.sqrt(x) for x in range(start, end + 1)]
+        return squares
+
+    print(e_squares(1, 10))
